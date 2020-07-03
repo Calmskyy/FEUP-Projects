@@ -1,0 +1,36 @@
+body > h1 {
+    margin-left: 1em;
+    margin-top: 1em;
+    font-family: "Dancing Script";
+    font-weight: bold;
+}
+
+#p1, #p2 {
+    max-width: 1200px;
+}
+
+.sidenav {
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidenav form {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block; 
+    text-align: center;
+}
+
+.flexbox {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#about_header {
+    padding-bottom: 10px;
+}

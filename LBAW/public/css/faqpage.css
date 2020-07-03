@@ -1,0 +1,41 @@
+body > h1 {
+    margin-left: 1em;
+    margin-top: 1em;
+    font-family: "Dancing Script";
+    font-weight: bold;
+}
+
+.sidenav {
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidenav form {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block; 
+    text-align: center;
+}
+
+.question {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.question, .reply {
+    max-width: 1200px;
+}
+
+.reply {
+    margin-top: 20px;
+}
+
+.flexbox {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+}

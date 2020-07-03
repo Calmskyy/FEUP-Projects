@@ -1,0 +1,14 @@
+.slider-items {
+    background-color:#ffc107; 
+    overflow-x: hidden;
+}
+
+.slider-items > .slider {
+    overflow-x:scroll; 
+    white-space: nowrap;
+}
+
+.slider-items > .slider > div {
+    display: inline-block; 
+    float: none;
+}

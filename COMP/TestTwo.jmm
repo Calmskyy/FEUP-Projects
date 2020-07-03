@@ -1,0 +1,13 @@
+import static io.println(int) void;
+class TestTwo{
+    public static void main(String[] args){
+        int a;
+        int b;
+        a = 10;
+        b = 20;
+        while(a < b){
+        a = a + 1;
+        }
+        io.println(a);
+    }
+}

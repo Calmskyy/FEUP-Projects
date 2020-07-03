@@ -1,0 +1,141 @@
+body {
+    background-color: #fff5ce;
+}
+
+html, body {
+  line-height: 1.4;
+}
+
+.btn {
+  border-radius: 1rem;
+  margin-bottom: 0.25em;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background-color: #212121;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.btn:hover {
+  color: #212121;
+  background-color: #ffc107;
+}
+
+#search:hover {
+  color: #212121;
+  background-color: #fff5ce;
+}
+
+.navbar-brand {
+    font-family: "Dancing Script";
+    font-weight: bold; 
+    font-size: 30px;
+}
+
+.navbar-top-links a {
+    font-size: 15px;
+    margin-bottom: 1rem;
+    color: #212121;
+}
+
+a {
+    color: #212121;
+}
+
+#navbarSupportedContent {
+    margin-left: 30px;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+}
+
+#search-form {
+    /* display: inline-block; */
+    width: 60%;
+}
+
+#error {
+    font-size: 30px;
+}
+
+#success {
+    font-size: 30px;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    border-radius: 100%;
+    background: red;
+    color: white;
+  }
+
+.notification {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu{
+    top: 60px;
+    right: 0px;
+    left: unset;
+    width: 460px;
+    box-shadow: 0px 5px 7px -1px #c1c1c1;
+    padding-bottom: 0px;
+    padding: 0px;
+    height: 350px;
+    overflow-y: auto;
+  }
+  .dropdown-menu:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 12px;
+    border:10px solid #343A40;
+    border-color: transparent transparent #343A40 transparent;
+  }
+  .head{
+    padding:5px 15px;
+    border-radius: 3px 3px 0px 0px;
+  }
+  .footer{
+    padding:5px 15px;
+    border-radius: 0px 0px 3px 3px; 
+  }
+  .notification-box{
+    padding: 10px 0px; 
+  }
+  .bg-gray{
+    background-color: #eee;
+  }
+
+  .notification-box img{
+    /* width: 90px;
+    height: 90px; */
+    margin: auto;    
+    display: block;
+  }
+
+
+  
+  @media (max-width: 640px) {
+      .dropdown-menu{
+        top: 50px;
+        left: -16px;  
+        width: 290px;
+      } 
+      .nav{
+        display: block;
+      }
+      .nav .nav-item,.nav .nav-item a{
+        padding-left: 0px;
+      }
+      .message{
+        font-size: 13px;
+      }
+  }

@@ -1,0 +1,299 @@
+:root {
+    --orange: #ff6624;
+}
+
+.form-2 {
+    margin-left: 1.25%;
+    margin-top: 1em;
+    padding-left: 0;
+    width: 80%;
+    display: flex;
+}
+
+.form-2 form {
+    padding-left: 0;
+    display: inline-flex;
+    background: var(--orange);
+    opacity: 0.65;
+    border-radius: 10px;
+    padding-left: 1em;
+}
+
+.form-2 form label {
+    height: 1rem;
+    margin-right: 2rem;
+}
+
+.form-2 form label input {
+    font-weight: bold;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+.form-2 form label input:focus {
+    border-right: 3px solid var(--orange);
+    border-color: black;
+}
+
+.form-2 button {
+    width: 5em;
+}
+
+article.place_overview {
+    margin: 1.25% 1.25% 1.25% 1.25%; 
+    width: 22.5%;
+    position: relative;
+}
+
+.display_buttons {
+    display: flex;
+}
+
+.display_buttons > i {
+    height: 32px;
+    font-size: 32px;
+    margin-top: 8px;    
+    border-radius: 10px;
+    padding: 0.5rem;
+    opacity: 0.65;
+}
+
+.fas.fa-th {
+    background-color:var(--orange);
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.fas.fa-list {
+    margin-left: 4px;
+}
+
+.place_overview .fa-map {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    color: white;
+}
+
+.place_overview .fa-map:hover {
+    color: orange;
+}
+
+.place_overview .place_rating {
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
+    font-size: larger;
+    color: var(--orange);
+}
+
+.place_overview img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.places_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.place_overview a {
+    text-decoration: none;
+    color: black;
+    padding: 0;
+}
+
+.place_overview img:hover {
+    opacity: 0.5;
+}
+
+.place_overview p {
+    margin: 0.3em;
+}
+
+.place_location {
+    font-weight: bolder;
+    color: var(--orange);
+}
+
+.place_title {
+    font-weight: bolder;
+}
+
+.place_price {
+    font-style: italic;
+}
+
+.place_description {
+    display: none;
+}
+
+.navbar > ul a.searchMenu {
+    display: none;
+}
+
+.places_list_options {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.no_sorting_button {
+    background-color: var(--orange);
+}
+
+.dropbtn {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    border: 1px solid var(--orange);
+}
+  
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+
+.dropdown > span {
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content span {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content span:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-color: var(--orange);
+border: 1px solid var(--orange);
+}
+
+.places_list ~ #map {
+    display: none;
+    float: left;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    height: 100vh;
+}
+
+
+
+.places_and_map {
+    display: flex;
+}
+
+@media (max-width:60em) {
+
+    .form-2 {
+        margin-left: 1.66%;
+        width: 96.68%;
+        display: block;
+    }
+
+    .display_buttons {
+        display: block;
+    }
+
+    .fas.fa-th {
+        margin-left: 0em;
+    }
+
+    .fas.fa-list {
+        margin-left: 0em;
+    }
+
+    article.place_overview {
+        margin: 1.66% 1.66% 1.66% 1.66%; 
+        width: 30%;
+    }
+}
+
+@media (max-width:50em) {
+
+    .form-2 {
+        margin-left: 2.5%;
+        width: 95%;
+    }
+
+    article.place_overview {
+        margin: 2.5% 2.5% 2.5% 2.5%; 
+        width: 45%;
+    }
+}
+
+@media (max-width:40em) { 
+
+    .navbar > ul a.searchMenu {
+        color: white;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2em;
+        height: 0.8em;
+    }
+
+    .form-2 form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-2.responsive form {
+        display: block;
+    }
+
+    .form-2 {
+        width: 95%;
+        margin-right: 2.5%;
+    }
+
+    .form-2 button {
+        width: 100%;
+    }
+
+    .form-2 form label {
+        margin-bottom: 2em;
+        margin-right: 1em;
+    }
+
+    .display_buttons > i {
+        display: none;
+    }
+
+    article.place_overview {
+        margin: 2.5% 2.5% 2.5% 2.5%; 
+        width: 100%;
+    }
+}
+

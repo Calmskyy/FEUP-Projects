@@ -1,0 +1,130 @@
+body {
+    background-color: #fff5ce;
+    color: #212121;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 20em;
+    margin-left: 1em;
+    margin-top: 3em;
+    float: left;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-left: 4em;
+    width: 35em;
+}
+
+#identification > * {
+    font-size: 2em;
+}
+
+#contacts > * {
+    font-size: 2em;
+}
+
+#contacts h1 {
+    display: inline;
+    margin-left: 0.25em;
+}
+
+#contacts {
+    margin-top: 1.5rem;
+    margin-left: 4.5em;
+}
+
+#identification {
+    margin-top: 1.5rem;
+    margin-left: 4.5em;
+}
+
+.username {
+    margin-left: 2em;
+}
+
+.container-2{
+    margin-left: 38em;
+    margin-right: 5em;
+    padding: 50px;
+    padding-top: 10px;
+    color: #212121;
+}
+
+.info h1 {
+    display: inline;
+    margin-right: 2em;
+}
+
+.info h2 {
+    margin-top: 1em;
+}
+
+.container-1 p, .container-2 p {
+    font-size: 1.25rem;
+}
+
+.container-1 ul li, .container-2 ul li {
+    font-size: 1.25rem;
+}
+
+.review {
+    margin-top: 3em;
+}
+
+.review p {
+    float: none;
+    padding-left: 7em;
+    margin-top: 0.5em;
+}
+
+.review-avatar {
+    border-radius: 50%;
+    width: 7em;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.checked {
+    color: orange;
+}
+
+.review-btn {
+    background-color: #FFC107;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: -1em;
+}
+
+.review-btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: inherit;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#history_element {
+    margin: 15px;
+}

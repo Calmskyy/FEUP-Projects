@@ -1,0 +1,80 @@
+10
+1
+Colombia
+2019/9/23
+2019/10/14
+1200
+10
+3
+::::::::::
+2
+Madeira - Porto Santo
+2019/8/1
+2019/8/5
+300
+30
+11
+::::::::::
+-3
+Veneza
+2019/3/2
+2019/3/5
+300
+24
+24
+::::::::::
+4
+Douro vinhateiro - Vila Real, Regua
+2019/9/21
+2019/9/22
+100
+62
+9
+::::::::::
+5
+Tailandia
+2019/8/10
+2019/8/24
+1500
+5
+4
+::::::::::
+6
+Espanha - Madrid
+2025/3/1
+2025/3/20
+250
+30
+0
+::::::::::
+7
+Franca - Paris, Estrasburgo, Nice, Toulouse
+2023/3/4
+2023/3/29
+1000
+7
+0
+::::::::::
+8
+Vietname - Hoi An, Hanoi, Ho Chin Minh, Halong Bay
+2029/2/1
+2029/3/1
+1999
+30
+4
+::::::::::
+9
+Italia - Roma, Milao, Positano, Florenca
+2020/4/5
+2020/4/30
+1347
+9
+4
+::::::::::
+-10
+Rio de Janeiro
+2020/4/4
+2020/4/20
+234
+34
+0

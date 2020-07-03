@@ -1,0 +1,497 @@
+:root {
+    --orange: #ff6624;
+}
+
+.container_detail {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+    clear: both;
+}
+
+.full_width_image  {
+    margin-right: 5px;
+    margin-top: 1rem;
+    min-width: 800px;
+    height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+#side_images {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.side_image {
+    max-width: 480px;
+    height: 297.5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.images_container {
+    position: relative;
+    font-size: 300%;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+}
+
+.left_arrow_image {
+    opacity: 0.55;
+    position: absolute;
+    top: 275px;
+    left: 16px;
+}
+
+.right_arrow_image {
+    opacity: 0.55;
+    position: absolute;
+    top: 275px;
+    right: 500px;
+}
+
+.left_arrow_image:hover , .right_arrow_image:hover {
+    color: white;
+    opacity: 0.5;
+}
+
+.container_detail_content {
+    margin: 16px 0;
+}
+
+.detail_location {
+    font-weight: lighter;
+    font-style: italic;
+    color: gray;
+    margin-top: 0;
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.detail_description {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 0 2rem;
+}
+
+.detail_title {
+    margin: 0 2rem;
+}
+
+.extras, .showers, .bedrooms, .heating, .view, .wifi, .parking {
+    margin-left: 2rem;
+}
+
+#col-1 {
+    position: relative;
+    width: 45%;
+    float: left;
+    height: 100%;
+}
+  
+#col-2 {
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.fas.fa-shower, .fas.fa-bed, .fas.fa-thermometer-full, .fas.fa-binoculars, .fas.fa-wifi, .fas.fa-parking, .fas.fa-sort {
+    font-size: 32px;
+}
+
+.latest_button {
+    background-color: var(--orange);
+}
+
+#place_host {
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle; 
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+
+.user_detail_content h5 {
+    font-style: italic;
+    font-size: 100%;
+    color: var(--orange);
+    opacity: 0.8;
+    margin-top: 0;
+}
+
+.user_detail_content h4 {
+    margin-bottom: 0.5em;
+}
+
+.user_detail_content {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3em;
+    text-align: center;
+}
+
+img.user_detail_content {
+    margin: 0 32px;
+}
+
+.place_price {
+    text-align: left;
+    margin-left: 1em;
+    margin-bottom: 0;
+    opacity: 0.6;
+}
+
+#col-2 .book-form, .host_info  {
+    position: static;
+    margin: 2em auto;
+}
+
+.host_info {
+    text-align: center;
+}
+
+#col-2 .book-form label {
+    text-align: left;
+}
+
+#col-2 .book-form input {
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+#calculated_price {
+    text-align: left;
+}
+
+.place_price::after {
+    content: "€ / night";
+}
+
+.review_list_options {
+    margin: 1rem 1rem;
+}
+
+.place_reviews, .review_input {
+    clear: both;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.place_review, .submit_review {
+    padding: 0.1rem 1rem;
+    background-color: rgba(177, 177, 177, 0.1);
+    margin: 2em 0;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.submit_review form {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.submit_review textarea {
+    width: 100%;
+}
+
+.submit_review form button {
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+.place_review a {
+    display: none;
+}
+
+.place_review .id {
+    display: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.place_review h3, .submit_review h3 {
+    position: absolute;
+    margin: 0 auto;
+    top: 10px;
+    left: 90px;
+}
+
+.place_review h4 {
+    position: absolute;
+    top: 35px;
+    left: 90px;
+    margin-top: 0;
+    font-weight: lighter;
+    font-size: 90%;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.place_review p {
+    margin-right: 2em;
+    text-align: justify;
+}
+
+.place_review {
+    display: none;
+}
+
+.place_review:nth-child(-n+5) {
+    display:block;
+}
+
+.place_review img, .submit_review img {
+    width: 3.5rem;
+    margin-top: 0.2rem;
+}
+
+.more_reviews {
+    margin-left: 1em;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 100%;
+    color: var(--orange);
+    display: inline-block;
+}
+
+.more_reviews:hover {
+    border-bottom: 2px solid var(--orange);
+}
+
+.rating {
+    color: var(--orange);
+    margin-top: 1rem;
+}
+
+.votes {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.votes i {
+    font-size: larger;
+    display: block;
+    margin: 0 auto;
+}
+
+.votes i:hover {
+    color: var(--orange);
+}
+
+.votes p {
+    margin: 0;
+    display: block;
+}
+
+.input_review .rating {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: 'Font Awesome\ 5 Free';
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } 
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
+.edit_rating {
+    display: none;
+    margin: 0;
+    float: left;
+    clear: both;
+    font-weight: bolder;
+}
+
+.edit_review {
+    position: absolute;
+    bottom: 6px;
+    right: 12px;
+    width: 2rem;
+    background: none;
+}
+
+.save_review {
+    position: absolute;
+    bottom: 6px;
+    right: 12px;
+    width: 2rem;
+    display: none;
+}
+
+.place_reviews i.fa-thumbs-up, .place_reviews i.fa-thumbs-down {
+    display: none;
+}
+
+.place_benefits {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.place_benefits p {
+    flex: 0 25%;
+}
+
+.place_rating {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+#map {
+    max-width: 1240px;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.dropbtn {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    border: 1px solid var(--orange);
+}
+
+
+  
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+
+.dropdown > span {
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content span {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content span:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-color: var(--orange);
+border: 1px solid var(--orange);
+}
+
+.daterangepicker span.drp-selected {
+    display: none;
+}
+
+.daterangepicker button.cancelBtn.btn {
+    margin-bottom: 0.5rem;
+}
+.daterangepicker button.cancelBtn.btn, .daterangepicker button.applyBtn.btn{
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .full_width_image {
+        min-width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    #side_images {
+        display: none;
+    }
+
+    
+    .right_arrow_image {
+        right: 16px;
+    }
+
+    .detail_description {
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    #col-1 {
+        display: block;
+        width: 100%;
+    }
+
+    #col-2 {
+        display: block;
+        width: 100%;
+    }
+
+    .place_review form button {
+        width: 100%;
+    }
+
+    .place_benefits p {
+        flex: 0 90%;
+    }
+}

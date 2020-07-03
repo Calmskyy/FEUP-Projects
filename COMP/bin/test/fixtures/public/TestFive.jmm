@@ -1,0 +1,29 @@
+import static io.println(int) void;
+class TestFive {
+
+    public int mult(int a, int b){
+        int c;
+        c = a * b;
+        return c;
+    }
+
+    public static void main(String[] args){
+        int a;
+        int b;
+        int c;
+        TestFive s;
+        int[] d;
+
+        d = new int[2];
+        d[0] = 5;
+
+
+        a = d[0];
+
+        b = d.length;
+        s = new TestFive();
+        c = s.mult(a,b);
+        io.println(c);
+
+    }
+}

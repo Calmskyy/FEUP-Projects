@@ -1,0 +1,90 @@
+.signup-container {
+    height: 100%;
+    align-content: center;
+}
+
+body {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/52851881e4b068394a271c39/1583270295541-377ICEK428K5K4UKJD7T/ke17ZwdGBToddI8pDm48kKEe70UF8oKIO3wRkcdq3tB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0lCvyAd1-5UQFnp8aARaJsU8w50hfP6ECqf2LiXqlTgywEBlp1ZSpm6UHJZ6Jnwuow/Alternative+Process+1.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    padding: 3% 3% 0 3%;
+    width: 550px;
+    margin-top: 2%;
+    height: auto;
+    box-shadow: 0 5px 8px 0 rgba(1, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffc107;
+    margin-bottom: 2%;
+}
+
+.card h1 {
+    text-align: center;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: #212121;
+    font-size: 16px;
+}
+
+.card form {
+    padding: 5%;
+}
+
+.btnSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    background-color: #212121;
+    margin-top: 10px;
+}
+
+.btnSubmit:hover {
+    color: #212121;
+    background-color: #fff;
+}
+
+input[type=date] {
+    width: 100%;
+}
+
+.two-division {
+    width: 100%;
+    float: left;
+}
+
+.numeric {
+    margin-bottom: 0;
+}
+
+input[type=time] {
+    width: 100%;
+}
+
+.date, .start-bid {
+    float: left;
+    width: 47%;
+}
+
+.time, .difference {
+    right: 0px;
+    width: 47%;
+    float: right;
+}
+
+select {
+    border: 1px solid #E5E5E5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px #E8E8E8 inset;
+    height: 35px;
+    width: 47%;
+}
+
+

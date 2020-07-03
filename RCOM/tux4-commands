@@ -1,0 +1,49 @@
+/etc/init.d/networking restart
+  536  ifconfig eth0 up
+  537  ifconfig eth1 up
+  538  ifconfig eth0 172.16.20.254/24
+  539  ifconfig eth1 172.16.21.253/24
+  540  ifconfig
+  541  route -n
+  542* route del -net 172.16
+  543  route -n
+  544  route del -net 172.16.1.0 gw 0.0.0.0 netmask 255.255.255.0 dev eth0
+  545  route -n
+  546  route add default gw 172.16.21.254
+  547  route -n
+  548  route -n
+  549  route del -net 172.16.20.0 gw 0.0.0.0 netmask 255.255.255.0 dev eth0
+  550  route -n
+  551  route add -net 172.16.20.0/24 gw 0.0.0.0
+  552  route add -net 172.16.20.0/24 gw 0.0.0.0
+  553  route -n
+  554  ifconfig
+  555  ifconfig eth0
+  556  ifconfig
+  557  ifconfig eth0
+  558  ifconfig eth0
+  559  route add -net 172.16.20.0/24 gw 0.0.0.0 eth0
+  560  route add -net 172.16.20.0/24 gw 0.0.0.0
+  561  route -n
+  562  route add -net 172.16.20.0/24 gw 0.0.0.1
+  563  route add -net 172.16.20.0/24 gw
+  564  route add -net 172.16.20.0/24 
+  565  route add -net 172.16.20.0/24
+  566  route -n
+  567  route add -net 172.16.20.0/24 default gw
+  568  route add -net 172.16.20.0/24 gw default
+  569  route add -net 172.16.20.0/24 gw 0.0.0.0
+  570  route add -net 172.16.20.0/24 gw 0.0.1.0
+  571  route add -net 172.16.20.0/24 gw 0.0.0.0/0
+  572  route -n
+  573  route add -net 172.16.20.0/24 gw 172.16.21.0
+  574  route -n
+  575  route add -host 172.16.20.0 eth0
+  576  route -n
+  577* route del -net 172.16.20.0 gw 0.0.0.
+  578  route add -host 172.16.20.0/24 eth0
+  579  route add 172.16.20.0/24 eth0
+  580  route add 172.16.20.0/24 eth0
+  581  ip route add 172.16.20.0/24 via 0.0.0.0 dev eth0
+  582  route -n
+

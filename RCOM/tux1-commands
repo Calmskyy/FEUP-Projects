@@ -1,0 +1,17 @@
+  545  /etc/init.d/networking restart
+  546  ifconfig eth0 up
+  547  ifconfig eth0 192.16.20.1/24
+  548  ifconfig eth0 172.16.20.1/24
+  549  route add -net 172.16.21.0/24
+  550  route add -net 172.16.21.0/24 gw 172.16.20.254
+  551  ping 172.16.21.1
+  552  route -n
+  553  ifconfig
+  554* ifconfig eth0 
+  555  route -n
+  556  ifconfig eth0 172.16.20.1/24
+  557  ifconfig eth0 172.16.20.1/24
+  558  ifconfig
+  559  route -n
+  560  route add default gw 172.16.20.254
+

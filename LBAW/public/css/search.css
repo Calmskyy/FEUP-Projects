@@ -1,0 +1,15 @@
+.list-filters > li > a {
+    margin-left: 20px;
+}
+
+.checked {
+    color: orange;
+  }
+
+.search-item-description {
+    color: gray;
+} 
+
+.selected {
+    font-weight: bold;
+}

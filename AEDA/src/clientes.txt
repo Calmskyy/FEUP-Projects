@@ -1,0 +1,125 @@
+Elizabeth Lail
+27
+999888777
+12
+1
+:::::
+Daniela Loureiro
+19
+123987456
+-
+0
+:::::
+Jota Oliveira
+19
+101010101
+-
+0
+:::::
+Manuel Silva
+45
+954278154
+-
+0
+:::::
+Salome Marques
+28
+987654321
+-
+0
+:::::
+Vladimir Putin
+67
+195362345
+-
+0
+:::::
+Cristiano Messi
+34
+192837465
+-
+0
+:::::
+Scarlet Johanson
+31
+123456799
+-
+0
+:::::
+Ricardo Matos
+26
+888888888
+-
+0
+:::::
+Kim Jong-Un
+35
+100000000
+-
+0
+:::::
+Andreia Lopes
+20
+672947154
+-
+0
+:::::
+Ricardo Fazeres
+40
+165423785
+-
+0
+:::::
+Corinna Kopf
+24
+127846375
+-
+0
+:::::
+Kylie Jenner
+23
+420420420
+-
+0
+:::::
+Travis Scott
+26
+696969699
+-
+0
+:::::
+Donald Trump
+73
+196462356
+-
+0
+:::::
+Natalie Noel
+23
+862351845
+-
+0
+:::::
+Yennefer of Vengerberg
+101
+194362845
+-
+0
+:::::
+Scooby Doo
+18
+111199995
+-
+0
+:::::
+Edu Correia
+55
+111222111
+-
+0
+:::::
+Joao Rodrigo
+19
+123456789
+-
+0

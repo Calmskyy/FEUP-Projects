@@ -1,0 +1,25 @@
+import static io.println(int) void;
+class TestFour {
+
+    public int sub(int a, int b){
+        int c;
+        c = a - b;
+        return c;
+    }
+
+    public static void main(String[] args){
+        int a;
+        int b;
+        int c;
+        Simple s;
+
+        a = 20;
+
+        b = 10;
+        s = new Simple();
+        c = s.sub(a,b);
+        io.println(c);
+
+    }
+
+}

@@ -1,0 +1,283 @@
+options
+{
+   LOOKAHEAD=1;
+   STATIC = false;
+   MULTI=true;
+}
+
+
+PARSER_BEGIN(Jmm)
+
+public class Jmm
+{
+
+   private int errors = 0;
+
+   void reportError(ParseException e, String statement, boolean recover) {
+      System.out.println("Syntatic error on " + statement + " statement.\n\n" + e.toString());
+      errors++;
+
+      if (recover) {
+         recoverFromError();
+      }
+
+      if (errors >= 10) {
+         System.out.println("Reached maximum number of errors (" + 10 +
+                           "). Terminating.");
+         System.exit(1);
+      }
+  }
+
+   void recoverFromError() {
+      Token t;
+      do {
+         t = getToken(1);
+         if (t.kind == R_PAR)
+            return;
+         t = getNextToken();
+      } while (t.kind != R_PAR);
+  }
+
+
+}
+
+
+PARSER_END(Jmm)
+
+
+SKIP:
+{
+   " "
+   | "\r"
+   | "\t"
+   | "\n"
+   | < "//" (~["\r", "\n" ])* (
+         "\r"
+        | "\n"
+      ) >
+   | < "/*" (~["*"])* "*"(
+      (~["/"] (~["*"])* "*")* "/"
+      | "/"
+   ) >
+}
+
+/*reserved words*/
+TOKEN:
+{
+   <IMPORT: "import">
+   | <CLASS: "class">
+   | <EXTENDS: "extends">
+   | <PUBLIC: "public">
+   | <RETURN: "return">
+   | <STATIC: "static">
+   | <VOID: "void">
+   | <MAIN: "main">
+   | <STRING: "String">
+   | <INT: "int">
+   | <BOOLEAN: "boolean">
+   | <IF: "if">
+   | <ELSE: "else">
+   | <WHILE: "while">
+   | <LENGTH: "length">
+   | <TRUE: "true">
+   | <FALSE: "false">
+   | <THIS: "this">
+   | <NEW: "new">
+}
+
+/*operators*/
+TOKEN: {
+   < ASSIGN : "=">
+   | < AND : "&&">
+   | < LESSTHAN : "<">
+   | < SUM : "+">
+   | < SUB : "-">
+   | < MULT : "*">
+   | < DIV : "/">
+   | < NOT : "!">
+}
+
+/*delimiters*/
+TOKEN:
+{
+   < L_PAR : "(">
+   | < R_PAR : ")">
+   | < L_BRACE : "{">
+   | < R_BRACE : "}">
+   | < L_BRACKET : "[">
+   | < R_BRACKET : "]">
+   | < SEMICOLON : ";">
+   | < COMMA : ",">
+   | < DOT : ".">
+}
+
+/*identifier*/
+TOKEN:
+{
+   < IDENTIFIER : <LETTER> (<LETTER> | <DIGIT>)* > 
+   | < #LETTER : ["$", "_", "a"-"z", "A"-"Z"] > 
+   | < #DIGIT : ["0"-"9"] >
+}
+
+/*integer literal*/
+TOKEN:
+{
+   < INTEGER_LITERAL : <DECIMAL> | <OCTAL> | <HEXADECIMAL> | <BINARY> >
+   | < DECIMAL: ["1"-"9"](["0"-"9"])* >
+   | < #OCTAL: "0"(["0"-"7"])* >
+   | < #HEXADECIMAL: ("0x" | "0X")(["0"-"9", "A"-"F", "a"-"f"])+ >
+   | < #BINARY: ("0b" | "0B")(["0", "1"])+ >
+}
+
+
+SimpleNode ParseRoot(): {}
+{
+   (ImportDeclaration())* ClassDeclaration() <EOF>  {return jjtThis;}
+}
+
+void ImportDeclaration(): {Token t;} {
+   <IMPORT> [<STATIC> {jjtThis.isStatic=true;}] t=<IDENTIFIER>{jjtThis.className=t.image;} [<DOT> t=<IDENTIFIER>{jjtThis.methodName=t.image;}] [<L_PAR> ParamList() <R_PAR> (Type())?] <SEMICOLON>
+}
+
+void ParamList(): {} {
+   [Type() (<COMMA> Type())*]
+}
+
+void ClassDeclaration(): {} {
+   <CLASS> 
+   Identifier() 
+   (<EXTENDS> Identifier() #Extends(1))? 
+   <L_BRACE>
+      (VarDeclaration())*
+      (MethodDeclaration())*
+   <R_BRACE>
+}
+
+void VarDeclaration(): {} {
+   Type() Identifier() <SEMICOLON> 
+}
+
+void MethodDeclaration() #void: {}{
+   LOOKAHEAD(2) Method() | Main()
+}
+
+void Method(): {} {
+   <PUBLIC> Type() Identifier() <L_PAR> Args() <R_PAR> <L_BRACE>
+      (LOOKAHEAD(2) VarDeclaration())*
+      (Statement())*
+      (<RETURN> Expression() #Return(1))
+      <SEMICOLON>
+   <R_BRACE> 
+}
+
+void Main(): {} {
+   <PUBLIC> <STATIC> <VOID> <MAIN> <L_PAR> <STRING> <L_BRACKET> <R_BRACKET> Identifier() <R_PAR> <L_BRACE>
+      (LOOKAHEAD(2) VarDeclaration())*
+      (Statement())*
+   <R_BRACE>
+}
+
+void Type() #void: {} {
+   LOOKAHEAD(2) <INT> <L_BRACKET> <R_BRACKET> #Array
+   | <BOOLEAN> #Boolean
+   | <INT> #Int
+   | <VOID> #Void
+   | Identifier()
+}
+
+void Statement() #void: {} {
+   (<L_BRACE> (Statement())* <R_BRACE>)
+   |  (try {
+         // (<IF><L_PAR> Expression()<R_PAR>  Statement() #If(2)) <ELSE> #Else Statement()
+         (If() (Else())?)
+      } 
+      catch (ParseException e) {
+         reportError(e, "IF", false);
+      })
+   | While()
+   | LOOKAHEAD(2) Assign() <SEMICOLON> //TODO: Assign ou else não estão bem definidos
+   | LOOKAHEAD(2) Expression() <SEMICOLON>
+}
+
+void While(): {} {
+   <WHILE><L_PAR>
+         try {
+            Expression()
+         } 
+         catch (ParseException e) {
+            reportError(e, "WHILE", true);
+         }
+      <R_PAR> Statement()
+}
+
+void Assign(): {} {
+   LOOKAHEAD(2) Identifier() <ASSIGN> Expression() 
+   | ArrayAccess() <ASSIGN> Expression()
+}
+
+void If(): {} {
+   <IF><L_PAR> Expression()<R_PAR>  Statement() 
+}
+
+void Else(): {} {
+   <ELSE> Statement()
+}
+
+void Expression() #void: {} {
+   Value() AuxExpression()                       //TODO: not sure
+   | Identifier() AuxExpression()
+   | LOOKAHEAD(2) <NEW> <INT> <L_BRACKET> Expression() <R_BRACKET> #NewArray(1) AuxExpression()
+   | <NEW> Identifier() #NewClass(1) <L_PAR> <R_PAR> AuxExpression()
+   | <NOT> Expression() #Not(1) AuxExpression()
+   | <L_PAR> Expression() <R_PAR> AuxExpression()
+}
+
+void AuxExpression() #void: {} {
+   Operator() AuxExpression()
+   | <L_BRACKET> Expression() <R_BRACKET> #ArrayAccess(2) AuxExpression()
+   | LOOKAHEAD(2) <DOT> (<LENGTH> #Length) #Dot(2) AuxExpression()
+   | <DOT> Identifier() <L_PAR> Args() <R_PAR> #FunctionCall(3) AuxExpression() // TODO: tratar este Dot
+   | {}
+}
+
+void ArrayAccess(): {} {
+   Identifier() <L_BRACKET> Expression() <R_BRACKET>
+}
+
+void Value(): {Token t;} {
+   (t=<INTEGER_LITERAL> 
+   | t=<TRUE> 
+   | t=<FALSE> 
+   | t=<THIS> )
+   {
+      jjtThis.val = t.image;
+   }  
+}
+
+
+void Operator() #void: {} {
+   <AND> Expression() #And(2)
+   | LOOKAHEAD( <LESSTHAN> (Value() | Identifier()) <AND>) <LESSTHAN> (Value() | Identifier()) #Less(2) 
+   | <LESSTHAN> Expression() #Less(2)
+   | LOOKAHEAD( <SUM> (Value() | Identifier()) (<LESSTHAN> | <AND>)) <SUM> (Value() | Identifier()) #Sum(2) 
+   | <SUM> Expression() #Sum(2)
+   | LOOKAHEAD( <SUB> (Value() | Identifier()) (<LESSTHAN> | <AND>)) <SUB> (Value() | Identifier()) #Sub(2) 
+   | <SUB> Expression() #Sub(2)
+   | LOOKAHEAD( <MULT> (Value() | Identifier()) (<LESSTHAN> | <AND>)) <MULT> (Value() | Identifier()) #Mult(2) 
+   | <MULT> Expression()  #Mult(2)
+   | LOOKAHEAD( <DIV> (Value() | Identifier()) (<LESSTHAN> | <AND>)) <DIV> (Value() | Identifier()) #Div(2) 
+   | <DIV> Expression()  #Div(2)
+}
+
+void Args(): {} {
+   LOOKAHEAD(2) Type() Identifier() (<COMMA> Type() Identifier())*
+   | Expression() (<COMMA> Expression())*
+   | {}
+}
+
+void Identifier(): {Token t;} {
+   t=<IDENTIFIER>
+   {
+      jjtThis.val = t.image;
+   }
+}

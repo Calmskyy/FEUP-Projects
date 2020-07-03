@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tetris:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tetris_jar</output-path>
+    <root id="archive" name="Tetris.main.jar">
+      <element id="module-output" name="Tetris.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.lanterna/lanterna/3.0.1/d2e5226e280c439e6817f98a07beed203e988c5d/lanterna-3.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

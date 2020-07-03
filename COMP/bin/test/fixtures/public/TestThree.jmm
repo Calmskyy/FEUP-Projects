@@ -1,0 +1,15 @@
+import static io.println(int) void;
+class TestThree{
+    public static void main(String[] args){
+        int[] a;
+        a = new int[2];
+        a[0] = 10;
+        a[1] = 20;
+        if(a[1] < a[0]){
+        io.println(a[0]);
+        }
+        else{
+        io.println(a[1]);
+        }
+    }
+}

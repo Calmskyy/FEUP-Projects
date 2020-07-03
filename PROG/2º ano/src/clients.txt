@@ -1,0 +1,35 @@
+Rui Manuel
+234987156
+4
+Rua Sem Fim / 200 / 5Esq / 200-001 / Lisboa
+2
+::::::::::
+Belmiro Miguel
+111987666
+2
+Avenida dos Grilos / 100 / - / 300-101 / Coimbra
+4
+::::::::::
+Joao Diegues
+249892685
+3
+Rua de Mejinhos / 33 / 1 / 4630-329 / Marco de Canaveses
+
+::::::::::
+Filipe Triste
+234123567
+5
+Rua das Naus / 123 / 4Esq / 4200-123 / Porto
+
+::::::::::
+Maria Diegues
+161371612
+3
+Rua de Meijinhos / 33 / 1 / 4630-329 / Marco de Canaveses
+1; 4; 2
+::::::::::
+Teresa Barbosa
+265743654
+4
+Rua Antero de Quental / 2 / 2 / 4300-234 / Porto
+5; 9; 8; 4 ; 2

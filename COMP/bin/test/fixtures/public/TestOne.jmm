@@ -1,0 +1,12 @@
+import static io.println(int) void;
+class TestOne{
+    public static void main(String[] args){
+        int a;
+        int b;
+        int c;
+        a = 10;
+        b = 3;
+        c = a + b;
+        io.println(c);
+    }
+}

@@ -1,0 +1,23 @@
+import static io.println(int) void;
+class Simple {
+
+    public int add(int a, int b){
+        int c;
+        c = a + b;
+        return c;
+    }
+
+    public static void main(String[] args){
+        int a;
+        int b;
+        int c;
+        Simple s;
+
+        a = 10;
+        b = 20;
+        s = new Simple();
+        c = s.add(a,b);
+        io.println(c);
+    }
+
+}

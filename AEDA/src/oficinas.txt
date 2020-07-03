@@ -1,0 +1,44 @@
+Aunt Dulce
+Fiat ; SEAT 
+0
+04/01/2020
+:::::
+Queiros Mecanico
+Volkswagen 
+1
+05/01/2020
+:::::
+Norauto
+Renault ; FIAT 
+1
+05/01/2020
+:::::
+Carros 3
+Volkswagen
+1
+05/01/2020
+:::::
+Matrizauto
+Scania
+1
+05/01/2020
+:::::
+FIFA
+Tesla
+1
+05/01/2020
+:::::
+Marine
+Volkswagen 
+1
+05/01/2020
+:::::
+FEUP
+Ferrari
+1
+05/01/2020
+:::::
+Neymar
+Lamborghini
+1
+05/01/2020

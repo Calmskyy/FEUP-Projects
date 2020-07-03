@@ -1,0 +1,27 @@
+Porto -> Aveiro - 75
+Porto -> Braga - 54.3
+Porto -> Vila Real - 95.0
+Porto -> Viseu - 127.9
+Porto -> Braganca - 207.2
+Porto -> Viana do Castelo - 74.4
+Porto -> Guimaraes - 55.4
+Aveiro -> Braga - 123.9
+Aveiro -> Viseu - 84.6
+Aveiro -> Braganca - 269.8
+Aveiro -> Vila Real - 157.1
+Aveiro -> Guimaraes - 73.2
+Aveiro -> Viana do Castelo - 153.0
+Viseu -> Braganca - 198.0
+Viseu -> Braga - 176.2
+Viseu -> Guimaraes - 177.0
+Viseu -> Vila Real - 91.0
+Viseu -> Viana do Castelo - 199.7
+Guimaraes -> Braga - 131.1
+Guimaraes -> Braganca - 198.0
+Guimaraes -> Viana do Castelo - 81.2
+Guimaraes -> Vila Real - 85.8
+Braga -> Braganca - 205.8
+Braga -> Vila Real - 105.3
+Braga -> Viana do Castelo - 61.5
+Braganca -> Vila Real - 118.2
+Braganca -> Viana do Castelo - 274.0

@@ -1,0 +1,48 @@
+  485  ifconfig eth0 up
+  486  ifconfig eth0 172.16.21.1/24
+  487  ifconfig
+  488  ping 172.16.20.1
+  489  ifconfig eth0 up
+  490  ifconfig eth0 172.16.21.1/24
+  491  ifconfig
+  492  ifconfig
+  493  arp -a
+  494  arp -a
+  495  route -n
+  496  route -n
+  497  arp -a
+  498  route -n
+  499  arp -a
+  500  ping 172.16.20.254
+  501  ping 172.16.21.254
+  502  ping 172.16.21.254
+  503  route -n
+  504  route add default gw 172.16.21.254
+  505  route add -net 172.16.20.0/24 gw 172.16.21.253
+  506  echo 0 > /proc/sys/net/ipv4/conf/eth0/accept_redirects
+  507  echo 0 > /proc/sys/net/ipv4/conf/all/accept_redirects
+  508  route -n
+  509  route del -net 172.16.20.0/24 gw 172.16.21.253
+  510  route -n
+  511  ping 172.16.20.1
+  512  clear
+  513  ping 172.16.20.1
+  514  ping 172.16.20.1
+  515  traceroute 172.16.20.1
+  516  route add -net 172.16.20.0/24 gw 172.16.21.253
+  517  traceroute 172.16.20.1
+  518  echo 1 > /proc/sys/net/ipv4/conf/eth0/accept_redirects
+  519  echo 2 > /proc/sys/net/ipv4/conf/eth0/accept_redirects
+  520  echo 1 > /proc/sys/net/ipv4/conf/all/accept_redirects
+  521  route del -net 172.16.20.0/24 gw 172.16.21.254
+  522  route del -net 172.16.20.0/24 gw 172.16.21.253
+  523  ping 172.16.20.1
+  524  route -n
+  525  route add default gw 172.16.21.254
+  526  route -n
+  527  echo 0 >/proc/sys/net/ipv4/conf/eth0/accept_redirects
+  528  echo 0 >/proc/sys/net/ipv4/conf/all/accept_redirects
+  529  ping 172.16.20.1
+  530  traceroute 172.16.20.1
+  531  route add -net 172.16.20.0/24 gw 172.16.21.253
+

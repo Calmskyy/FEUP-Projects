@@ -1,0 +1,245 @@
+body {
+    /* color: #212121; */
+    background-color: #f1eb90;
+    background-image: url('./the_scream.jpg');
+}
+
+#image {
+    float: left;
+    display: block;
+    max-width: 20em;
+    max-height: 20em;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.card {
+    margin: auto;
+    width: 70em;
+    padding: 10px;
+    height: 100%;
+    border-radius: 0;
+    border-width: 0;
+    background-color: #fff5ce;
+}
+
+h1:first-of-type {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+h1:nth-child(2) {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-left: 2em;
+    width: 6em;
+}
+
+.image-square {
+    margin: auto;
+    height: 52px;
+    width: 52px;
+    margin-top: 10px;
+}
+
+.image-square > img {
+    display: block;
+    max-width:50px;
+    max-height:50px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.text{
+    margin-left: 36em;
+    margin-right: 1em;
+    padding: 50px;
+    padding-top: 10px;
+    color: #212121;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-left: 1.5em;
+    width: 25em;
+}
+
+.foto img {
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    max-height: 600px;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 4em;
+    margin-left: 1em;
+    margin-top: 3em;
+    float: left;
+}
+
+#sellerInfo {
+    margin-left: 2em;
+}
+
+#sellerInfo > div > h1 {
+    margin: 2px;
+    margin-left: 6.5em;
+    font-size: 15px;
+}
+
+#sellerInfo > div {
+    margin-top: 57.5px;
+}
+
+.comment {
+    margin-top: 2.5em;
+}
+
+#newComment {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+#newComment img, #newComment p, #newComment h1 {
+    display: none;
+}
+
+.comment p {
+    float: none;
+    margin-top: 0.5em;
+}
+
+.deleted {
+    float: none;
+    display: block;
+    margin-top: 0.5em;
+}
+
+.comment h1 {
+    margin: 0em;
+    font-size: 1em;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    width: 4em;
+    float: left;
+    margin-right: 1em;
+}
+
+p:empty:not(:focus)::before {
+    content: attr(data-placeholder);
+}
+
+.checked {
+    color: orange;
+}
+
+.fa-star:first-of-type{
+    margin-left: 1.2em;
+}
+
+input[type=number]{
+    width: 46%;
+    font-size: 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px #E8E8E8 inset;
+    height: 35px;
+}
+
+h2:first-of-type {
+    margin-top: 2em;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.text > p:nth-child(4) {
+    margin-top: 10px;
+}
+
+table {
+    width: 20em;
+    margin-top: 20px;
+}
+
+tr:nth-child(2) {
+    font-size: 2em;
+}
+
+tr:nth-child(1) {
+    font-size: 15px;
+}
+
+#input {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#input > div > p {
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+#bid:nth-child(2) {
+    float: right;
+}
+
+.edit_comment, .save_comment, .delete_comment, .create_comment {
+    width: 50%;
+    margin: 0em;
+    margin-bottom: 1em;
+}
+
+.edit_comment, .save_comment {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+#bidder {
+    margin: -20px 0 10px 0;
+    padding: 0;
+    padding-left: 5em;
+}
+
+.text h1:first-child {
+    font-size: 2em;
+}
+
+.text h2 {
+    font-size: 1em;
+}   
+
+#countdown {
+    font-size: 40px;
+    font-weight: bold;
+}

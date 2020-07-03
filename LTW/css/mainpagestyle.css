@@ -1,0 +1,123 @@
+:root {
+    --orange: #ff6624;
+}
+
+.bgimg-1 {
+    background-image: url("../images/background.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-1 h2 {
+    padding-left: 1rem;
+    margin-bottom: 0;
+    font-weight: bolder;
+}
+
+form label, form input {
+    display: block;
+}
+
+form {
+    padding: 1em;
+}
+
+form label {
+    font-weight: bolder;
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 1em;
+    border: none;
+    border-bottom: 2px solid var(--orange);
+    padding-top: 0.5em;
+}
+
+form input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid var(--orange);
+}
+
+form > button, button {
+    width: 100%;
+    height: 2rem;
+    /* float: right; */
+    color: bold;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: none;
+    /* border-right: 2px solid var(--orange); */
+    transition-duration: 0.4s;
+}
+
+form > button:hover, button:hover{
+    border: 2px solid var(--orange);
+    background-color: var(--orange);
+    color: white;
+}
+
+.form-1 {
+    background: white;
+    width: 25rem;
+    margin: 0 auto;
+    position: relative;
+    top: 10em;
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+#main-background {
+    display: none;
+}
+
+@media screen and (max-width: 40em) {
+    .form-1 {
+        top: 0em;
+        width: auto;
+        height: 100%;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    form > button {
+        height: 4rem;
+    }
+
+    form > input:last-child {
+        float: none;
+        width: 100%;
+        height: 5rem;
+        margin: 0 auto;
+        border-radius: 0;
+        border: none;
+        /* border-right: 2px solid var(--orange); */
+        transition-duration: 0.4s;
+    }
+
+    .bgimg-1 {
+        background-image: none;
+    }
+
+    .bgimg-1 input {
+        margin-bottom: 3em;
+    }
+
+    #main-background {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .bgimg-1 {
+        height: auto;
+    }
+
+}
