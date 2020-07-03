@@ -1,5 +1,0 @@
-usar lcom_run proj para correr
-dentro de shared/proj/src
-user: lcom
-pass: lcom
-desligar net (?)
