@@ -1,0 +1,22 @@
+{
+  "name": "ssin-server",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": "14.16.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "nodemon": "^2.0.7"
+  }
+}

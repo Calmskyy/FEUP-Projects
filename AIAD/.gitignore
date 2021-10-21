@@ -1,0 +1,17 @@
+**/.DS_Store
+.idea
+**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+!src/**/build/
+.gradle
+MTPs-Main-Container.txt
+APDescription.txt
+repast.log
+build
+out/
+bin/
+.settings
+.classpath
+.project
+logs/
